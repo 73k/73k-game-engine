@@ -1,4 +1,11 @@
-#ifndef ENGINE_H
-#define ENGINE_H
+namespace Engine 
+{
+	class State 
+	{
+		virtual void Init() = 0;
 
-#endif
+		virtual void HandleInput() = 0;
+		virtual void Update() = 0;
+		virtual void Draw(float dt) = 0;
+	};
+}
